@@ -1,0 +1,13 @@
+--- cln-1.1.8/doc/cln.texi.orig	2004-07-01 22:27:26.000000000 +0200
++++ cln-1.1.8/doc/cln.texi	2004-08-02 23:14:29.293843541 +0200
+@@ -12,8 +12,9 @@
+ @end iftex
+ @c %**end of header
+ 
++@dircategory Libraries:
+ @direntry
+-* CLN: (cln).                       Class Library for Numbers (C++).
++* CLN: (cln).				Class Library for Numbers (C++)
+ @end direntry
+ 
+ @c My own index.
