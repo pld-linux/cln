@@ -1,12 +1,12 @@
 Summary:	C++ Class Library for Numbers
 Summary(pl):	Biblioteka klas C++ dla liczb
 Name:		cln
-Version:	1.1.8
+Version:	1.1.9
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/%{name}-%{version}.tar.bz2
-# Source0-md5:	490dd0697b3d16b2ba6a843829228cba
+# Source0-md5:	76fbeeeeac1559e482b404b4674915e2
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-link.patch
 URL:		http://www.ginac.de/CLN/
@@ -65,13 +65,12 @@ Statyczna biblioteka CLN.
 %patch0 -p1
 %patch1 -p1
 
-# kill AC_PROG_LIBTOOL
-head -n 423 autoconf/aclocal.m4 > acinclude.m4
-tail -n +4045 autoconf/aclocal.m4 >> acinclude.m4
+# kill m4/libtool.m4 inclusion
+head -n 871 autoconf/aclocal.m4 > acinclude.m4
 
 %build
 %{__libtoolize}
-%{__aclocal} -I . -I m4
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make}
