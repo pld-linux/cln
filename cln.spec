@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	ftp://ftp.ilog.fr/pub/Users/haible/gnu/%{name}-%{version}.tar.gz
 # Source0-md5:	55d9e26806bfe9023c09caf2d7e7e91b
 URL:		http://www.ginac.de/CLN/
+BuildRequires:	automake
 BuildRequires:	gmp-devel
 BuildRequires:	libstdc++-devel
 Obsoletes:	libcln2
@@ -61,7 +62,8 @@ Statyczna biblioteka CLN.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install examples/{Makefile,*.cc} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
