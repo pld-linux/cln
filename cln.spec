@@ -1,16 +1,20 @@
 Summary:	C++ Class Library for Numbers
 Summary(pl):	Biblioteka klas C++ dla liczb
 Name:		cln
-Version:	1.1.7
+Version:	1.1.8
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/%{name}-%{version}.tar.bz2
-# Source0-md5:	b4a0ab4415281d2143edd44f2c8de136
+# Source0-md5:	490dd0697b3d16b2ba6a843829228cba
+Patch0:		%{name}-info.patch
+Patch1:		%{name}-link.patch
 URL:		http://www.ginac.de/CLN/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gmp-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.5
 Obsoletes:	libcln2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,6 +32,8 @@ Summary:	Development files for programs using the CLN library
 Summary(pl):	Pliki do programowania z u¿yciem biblioteki CLN
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	gmp-devel
+Requires:	libstdc++-devel
 Obsoletes:	libcln2-devel
 
 %description devel
@@ -52,8 +58,17 @@ Statyczna biblioteka CLN.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+
+# kill AC_PROG_LIBTOOL
+head -n 423 autoconf/aclocal.m4 > acinclude.m4
+tail -n +4045 autoconf/aclocal.m4 >> acinclude.m4
 
 %build
+%{__libtoolize}
+%{__aclocal} -I . -I m4
+%{__autoconf}
 %configure
 %{__make}
 
