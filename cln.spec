@@ -15,6 +15,7 @@ BuildRequires:	automake
 BuildRequires:	gmp-devel >= 3.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	texinfo
 Requires:	gmp >= 3.0
 Obsoletes:	libcln2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
