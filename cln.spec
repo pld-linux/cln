@@ -18,6 +18,9 @@ BuildRequires:	libtool >= 2:1.5
 Obsoletes:	libcln2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# won't work with -O0 because of static const initialization loops
+%define		debugcflags	-O1 -g
+
 %description
 A GPLed collection of C++ math classes and functions, that will bring
 efficiency, type safety, algebraic syntax to everyone in a memory and
