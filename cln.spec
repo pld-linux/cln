@@ -12,9 +12,10 @@ Patch1:		%{name}-link.patch
 URL:		http://www.ginac.de/CLN/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gmp-devel
+BuildRequires:	gmp-devel >= 3.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
+Requires:	gmp >= 3.0
 Obsoletes:	libcln2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,7 +36,7 @@ Summary:	Development files for programs using the CLN library
 Summary(pl):	Pliki do programowania z u¿yciem biblioteki CLN
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gmp-devel
+Requires:	gmp-devel >= 3.0
 Requires:	libstdc++-devel
 Obsoletes:	libcln2-devel
 
