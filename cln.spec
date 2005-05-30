@@ -15,7 +15,12 @@ BuildRequires:	automake
 BuildRequires:	gmp-devel >= 3.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	tetex-dvips
+BuildRequires:	tetex-fonts-latex
+BuildRequires:	tetex-format-plain
+BuildRequires:	tetex-metafont
 BuildRequires:	texinfo
+BuildRequires:	texinfo-texi2dvi
 Requires:	gmp >= 3.0
 Obsoletes:	libcln2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
