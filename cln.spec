@@ -8,7 +8,6 @@ Group:		Libraries
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/%{name}-%{version}.tar.bz2
 # Source0-md5:	f194811dadcd2b1dca5f78a62370eb56
 Patch0:		%{name}-info.patch
-#Patch1:		%{name}-link.patch
 URL:		http://www.ginac.de/CLN/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
