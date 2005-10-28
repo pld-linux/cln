@@ -1,14 +1,14 @@
 Summary:	C++ Class Library for Numbers
 Summary(pl):	Biblioteka klas C++ dla liczb
 Name:		cln
-Version:	1.1.9
+Version:	1.1.10
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/%{name}-%{version}.tar.bz2
-# Source0-md5:	76fbeeeeac1559e482b404b4674915e2
+# Source0-md5:	f194811dadcd2b1dca5f78a62370eb56
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-link.patch
+#Patch1:		%{name}-link.patch
 URL:		http://www.ginac.de/CLN/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -69,14 +69,12 @@ Statyczna biblioteka CLN.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
-# kill m4/libtool.m4 inclusion
-head -n 871 autoconf/aclocal.m4 > acinclude.m4
+rm -f m4/libtool.m4
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %configure
 %{__make}
@@ -105,20 +103,20 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README TODO*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libcln.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/cln-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libcln.so
+%{_libdir}/libcln.la
 %{_includedir}/cln
 %{_mandir}/man1/cln-config.1*
-%{_infodir}/*.info*
-%{_aclocaldir}/*.m4
-%{_pkgconfigdir}/*.pc
+%{_infodir}/cln.info*
+%{_aclocaldir}/cln.m4
+%{_pkgconfigdir}/cln.pc
 %{_examplesdir}/%{name}-%{version}
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libcln.a
