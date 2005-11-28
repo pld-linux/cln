@@ -1,12 +1,12 @@
 Summary:	C++ Class Library for Numbers
 Summary(pl):	Biblioteka klas C++ dla liczb
 Name:		cln
-Version:	1.1.10
+Version:	1.1.11
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/%{name}-%{version}.tar.bz2
-# Source0-md5:	f194811dadcd2b1dca5f78a62370eb56
+# Source0-md5:	7313dc20608ddc5dcfdae4d2f9138762
 Patch0:		%{name}-info.patch
 URL:		http://www.ginac.de/CLN/
 BuildRequires:	autoconf >= 2.50
