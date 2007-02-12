@@ -1,5 +1,5 @@
 Summary:	C++ Class Library for Numbers
-Summary(pl):	Biblioteka klas C++ dla liczb
+Summary(pl.UTF-8):   Biblioteka klas C++ dla liczb
 Name:		cln
 Version:	1.1.13
 Release:	1
@@ -32,13 +32,13 @@ A GPLed collection of C++ math classes and functions, that will bring
 efficiency, type safety, algebraic syntax to everyone in a memory and
 speed efficient library.
 
-%description -l pl
-Objêty licencj± GPL zbiór klas i funkcji matematycznych C++ daj±cy
-wydajno¶æ, bezpieczne typy i sk³adniê algebraiczn±.
+%description -l pl.UTF-8
+ObjÄ™ty licencjÄ… GPL zbiÃ³r klas i funkcji matematycznych C++ dajÄ…cy
+wydajnoÅ›Ä‡, bezpieczne typy i skÅ‚adniÄ™ algebraicznÄ….
 
 %package devel
 Summary:	Development files for programs using the CLN library
-Summary(pl):	Pliki do programowania z u¿yciem biblioteki CLN
+Summary(pl.UTF-8):   Pliki do programowania z uÅ¼yciem biblioteki CLN
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gmp-devel >= 3.0
@@ -49,20 +49,20 @@ Obsoletes:	libcln2-devel
 This package is necessary if you wish to develop software based on the
 CLN library.
 
-%description devel -l pl
-Ten pakiet jest niezbêdny do tworzenia oprogramowania opartego na
+%description devel -l pl.UTF-8
+Ten pakiet jest niezbÄ™dny do tworzenia oprogramowania opartego na
 bibliotece CLN.
 
 %package static
 Summary:	Static CLN library
-Summary(pl):	Statyczna biblioteka CLN
+Summary(pl.UTF-8):   Statyczna biblioteka CLN
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static CLN library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka CLN.
 
 %prep
