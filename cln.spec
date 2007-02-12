@@ -1,5 +1,5 @@
 Summary:	C++ Class Library for Numbers
-Summary(pl.UTF-8):   Biblioteka klas C++ dla liczb
+Summary(pl.UTF-8):	Biblioteka klas C++ dla liczb
 Name:		cln
 Version:	1.1.13
 Release:	1
@@ -38,7 +38,7 @@ wydajność, bezpieczne typy i składnię algebraiczną.
 
 %package devel
 Summary:	Development files for programs using the CLN library
-Summary(pl.UTF-8):   Pliki do programowania z użyciem biblioteki CLN
+Summary(pl.UTF-8):	Pliki do programowania z użyciem biblioteki CLN
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gmp-devel >= 3.0
@@ -55,7 +55,7 @@ bibliotece CLN.
 
 %package static
 Summary:	Static CLN library
-Summary(pl.UTF-8):   Statyczna biblioteka CLN
+Summary(pl.UTF-8):	Statyczna biblioteka CLN
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
