@@ -1,12 +1,12 @@
 Summary:	C++ Class Library for Numbers
 Summary(pl.UTF-8):	Biblioteka klas C++ dla liczb
 Name:		cln
-Version:	1.1.13
+Version:	1.2.0
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/%{name}-%{version}.tar.bz2
-# Source0-md5:	1f3d227360003b389bba14c8a5c3695a
+# Source0-md5:	d30bca7c30e61985cf67b3f97e019786
 Patch0:		%{name}-info.patch
 URL:		http://www.ginac.de/CLN/
 BuildRequires:	autoconf >= 2.50
@@ -93,26 +93,24 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%post devel	-p	/sbin/postshell
+%post	devel -p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun devel	-p	/sbin/postshell
+%postun	devel -p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README TODO*
 %attr(755,root,root) %{_libdir}/libcln.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libcln.so.5
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/cln-config
 %attr(755,root,root) %{_libdir}/libcln.so
 %{_libdir}/libcln.la
 %{_includedir}/cln
-%{_mandir}/man1/cln-config.1*
 %{_infodir}/cln.info*
-%{_aclocaldir}/cln.m4
 %{_pkgconfigdir}/cln.pc
 %{_examplesdir}/%{name}-%{version}
 
