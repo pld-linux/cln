@@ -1,9 +1,10 @@
---- cln-1.1.8/doc/cln.texi.orig	2004-07-01 22:27:26.000000000 +0200
-+++ cln-1.1.8/doc/cln.texi	2004-08-02 23:14:29.293843541 +0200
-@@ -12,8 +12,9 @@
- @end iftex
+--- cln-1.2.0/doc/cln.texi.orig	2008-01-19 21:50:47.000000000 +0100
++++ cln-1.2.0/doc/cln.texi	2008-02-09 01:32:57.802489263 +0100
+@@ -8,9 +8,9 @@
+ @paragraphindent 0
  @c %**end of header
  
+-@dircategory Mathematics
 +@dircategory Libraries:
  @direntry
 -* CLN: (cln).                       Class Library for Numbers (C++).
