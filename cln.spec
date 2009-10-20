@@ -2,7 +2,7 @@ Summary:	C++ Class Library for Numbers
 Summary(pl.UTF-8):	Biblioteka klas C++ dla liczb
 Name:		cln
 Version:	1.2.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/%{name}-%{version}.tar.bz2
@@ -18,6 +18,7 @@ BuildRequires:	tetex-dvips
 BuildRequires:	tetex-fonts-latex
 BuildRequires:	tetex-format-plain
 BuildRequires:	tetex-metafont
+BuildRequires:	texconfig
 BuildRequires:	texinfo
 BuildRequires:	texinfo-texi2dvi
 Requires:	gmp >= 3.0
