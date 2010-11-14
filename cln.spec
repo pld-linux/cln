@@ -9,8 +9,8 @@ Source0:	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/%{name}-%{version}.tar.bz2
 # Source0-md5:	ede584cb1cafa66d56f42a3cf420469d
 Patch0:		%{name}-info.patch
 URL:		http://www.ginac.de/CLN/
-BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake >= 1:1.10
 BuildRequires:	gmp-devel >= 3.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
@@ -102,9 +102,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS README TODO*
+%doc NEWS README TODO
+%attr(755,root,root) %{_bindir}/pi
 %attr(755,root,root) %{_libdir}/libcln.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libcln.so.6
+%{_mandir}/man1/pi.1*
 
 %files devel
 %defattr(644,root,root,755)
